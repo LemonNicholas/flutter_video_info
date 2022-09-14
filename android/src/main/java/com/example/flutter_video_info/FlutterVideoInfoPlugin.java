@@ -88,8 +88,12 @@ public class FlutterVideoInfoPlugin implements FlutterPlugin, MethodCallHandler 
             } else {
                 orientation = null;
             }
+            try{
+                mediaRetriever.release();
+            }catch(Exception e){
+                throw e;
+            }
 
-            mediaRetriever.release();
         }else{
             author="";
             dateString="";
