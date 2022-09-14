@@ -91,7 +91,7 @@ public class FlutterVideoInfoPlugin implements FlutterPlugin, MethodCallHandler 
             try{
                 mediaRetriever.release();
             }catch(Exception e){
-                throw e;
+                e.printStackTrace();
             }
 
         }else{
